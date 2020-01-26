@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple</title>
+    <script type="text/javascript" src="/http-errors.js"></script>
+</head>
+<body>
+<div>
+    <form id="form">
+        <label>
+            Status
+            <input id="status" type="text" name="status" value="404" />
+        </label>
+        <button type="submit">Test</button>
+    </form>
+    <div id="result"></div>
+</div>
+<script>
+    const form = document.getElementById('form');
+    form.onsubmit = function (e) {
+      e.preventDefault();
+      const status = document.getElementById('status').value;
+      const result = document.getElementById('result');
+
+      fetch('/' + status)
+        .then(window.httpErrors.handleHttpErrors)
+        .then((e) => {
+          console.log(e);
+          result.textContent = 'HTTP code not handled';
+        })
+        .catch(err => {
+          if (err instanceof window.httpErrors.HttpBadRequestError) {
+            result.textContent = "It's a bad request";
+          } else if (err instanceof window.httpErrors.HttpNotFoundError) {
+            result.textContent = "It's a not found";
+          } else {
+            result.textContent = "It's a another error not handled in this example. Message from error is: " + err.message;
+          }
+        });
+    }
+</script>
+</body>
+</html>

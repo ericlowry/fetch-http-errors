@@ -1,0 +1,18 @@
+{
+  "name": "fetch-http-errors",
+  "version": "1.0.0",
+  "description": "Errors subclasses for HTTP code response",
+  "main": "dist/index.js",
+  "scripts": {
+    "code": "bash generate-code.sh",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Flavien Schriever <schrie_f@etna-alternance.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.29.1"
+  }
+}
