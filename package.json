@@ -1,8 +1,16 @@
 {
   "name": "fetch-http-errors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Errors subclasses for HTTP code response",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WTFlay/fetch-http-errors"
+  },
+  "bugs": {
+    "url": "https://github.com/WTFlay/fetch-http-errors/issues"
+  },
+  "homepage": "https://github.com/WTFlay/fetch-http-errors",
   "scripts": {
     "code": "bash generate-code.sh",
     "build": "rollup -c",
