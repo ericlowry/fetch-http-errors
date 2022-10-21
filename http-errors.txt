@@ -8,4 +8,5 @@
 407|Proxy Authentication Required
 408|Request Time-Out
 409|Conflict
+412|Precondition Failed
 500|Internal Server

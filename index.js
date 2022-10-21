@@ -8,6 +8,7 @@ import HttpNotAcceptableError from './classes/http-not-acceptable-error.js'
 import HttpProxyAuthenticationRequiredError from './classes/http-proxy-authentication required-error.js'
 import HttpRequestTimeOutError from './classes/http-request-time-out-error.js'
 import HttpConflictError from './classes/http-conflict-error.js'
+import HttpPreconditionFailedError from './classes/http-precondition-failed-error.js'
 import HttpInternalServerError from './classes/http-internal-server-error.js'
 
 function handleHttpErrors(res) {
@@ -32,6 +33,8 @@ function handleHttpErrors(res) {
       throw new HttpRequestTimeOutError(res);
     case 409:
       throw new HttpConflictError(res);
+    case 412:
+      throw new HttpPreconditionFailedError(res);
     case 500:
       throw new HttpInternalServerError(res);
     default:
@@ -51,5 +54,6 @@ export {
     HttpProxyAuthenticationRequiredError,
     HttpRequestTimeOutError,
     HttpConflictError,
+    HttpPreconditionFailedError,
     HttpInternalServerError,
 }
