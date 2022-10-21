@@ -17,16 +17,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-      "error",
-      "errors",
-      "fetch",
-      "http",
-      "exception"
+    "error",
+    "errors",
+    "fetch",
+    "http",
+    "exception"
   ],
   "author": "Flavien Schriever <schrie_f@etna-alternance.net>",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "rollup": "^1.29.1"
+    "rollup": "^1.32.1"
   }
 }

@@ -74,6 +74,13 @@
     }
   }
 
+  class HttpPreconditionFailedError extends Error {
+    constructor(res) {
+      super('Precondition Failed');
+      this.res = res;
+    }
+  }
+
   class HttpInternalServerError extends Error {
     constructor(res) {
       super('Internal Server');
@@ -103,6 +110,8 @@
         throw new HttpRequestTimeOutError(res);
       case 409:
         throw new HttpConflictError(res);
+      case 412:
+        throw new HttpPreconditionFailedError(res);
       case 500:
         throw new HttpInternalServerError(res);
       default:
@@ -118,6 +127,7 @@
   exports.HttpNotAcceptableError = HttpNotAcceptableError;
   exports.HttpNotFoundError = HttpNotFoundError;
   exports.HttpPaymentRequiredError = HttpPaymentRequiredError;
+  exports.HttpPreconditionFailedError = HttpPreconditionFailedError;
   exports.HttpProxyAuthenticationRequiredError = HttpProxyAuthenticationRequiredError;
   exports.HttpRequestTimeOutError = HttpRequestTimeOutError;
   exports.HttpUnauthorizedError = HttpUnauthorizedError;
