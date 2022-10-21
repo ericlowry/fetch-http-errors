@@ -1,16 +1,16 @@
 {
   "name": "fetch-http-errors",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Errors subclasses for HTTP code response",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WTFlay/fetch-http-errors"
+    "url": "https://github.com/ericlowry/fetch-http-errors"
   },
   "bugs": {
-    "url": "https://github.com/WTFlay/fetch-http-errors/issues"
+    "url": "https://github.com/ericlowry/fetch-http-errors/issues"
   },
-  "homepage": "https://github.com/WTFlay/fetch-http-errors",
+  "homepage": "https://github.com/ericlowry/fetch-http-errors",
   "scripts": {
     "code": "bash generate-code.sh",
     "build": "rollup -c",
@@ -23,7 +23,7 @@
     "http",
     "exception"
   ],
-  "author": "Flavien Schriever <schrie_f@etna-alternance.net>",
+  "author": "Flavien Schriever <schrie_f@etna-alternance.net>, Eric Lowry <eric@myrealms.org>",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.0.0",
